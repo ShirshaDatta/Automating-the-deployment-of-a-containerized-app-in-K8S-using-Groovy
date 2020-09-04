@@ -56,7 +56,7 @@ job('Testing') {
     
     steps {
        shell('''
-	   status=$(curl -o /dev/null -s -w "%{http_code}" http://192.168.99.100:32750)
+	   status=$(curl -o /dev/null -s -w "%{http_code}" http://192.168.99.100:32123/index.html)
 		if [ $status == 200 ]
 		then
 		echo "running"
