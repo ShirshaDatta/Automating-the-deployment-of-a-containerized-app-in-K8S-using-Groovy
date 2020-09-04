@@ -7,8 +7,8 @@ job('GitHub-Code') {
     }
     steps {
        shell(''' sudo cp * -v /Automating-the-deployment-of-a-containerized-app-in-K8S-using-Groovy.git
-       sudo docker build -t shirsha30/httpd_server:v1 /Automating-the-deployment-of-a-containerized-app-in-K8S-using-Groovy.git
-       sudo docker push shirsha30/httpd_server:v1 
+       sudo docker build -t shirsha30/httpd_server:latest /Automating-the-deployment-of-a-containerized-app-in-K8S-using-Groovy.git
+       sudo docker push shirsha30/httpd_server:latest
        ''')
     }
 }
@@ -18,7 +18,7 @@ job('Deployment') {
     }
     
     steps {
-       shell(''' fullfilename="/Automating-the-deployment-of-a-containerized-app-in-K8S-using-Groovy.git*.html"
+       shell(''' fullfilename="/Automating-the-deployment-of-a-containerized-app-in-K8S-using-Groovy.git/*.html"
 			filename=$(basename "$fullfilename")
 			ext="${filename##*.}"
 			echo $ext
