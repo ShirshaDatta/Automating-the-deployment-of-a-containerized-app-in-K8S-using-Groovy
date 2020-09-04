@@ -18,7 +18,7 @@ spec:
     spec:
      containers:
       - name: myweb-con
-        image: shirsha30/httpd_server:v1 
+        image: shirsha30/httpd_server:latest
         volumeMounts:
           - name: web-vol1
             mountPath: /var/www/html
