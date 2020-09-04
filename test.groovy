@@ -1,6 +1,6 @@
 job('GitHub-Code') {
 	triggers {
-        upstream('GrovyScript', 'SUCCESS')
+        upstream('GroovyScript', 'SUCCESS')
     }
     scm {
         github('ShirshaDatta/Automating-the-deployment-of-a-containerized-app-in-K8S-using-Groovy', 'master')
