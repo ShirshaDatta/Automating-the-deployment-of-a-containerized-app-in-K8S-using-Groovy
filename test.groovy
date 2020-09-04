@@ -6,8 +6,8 @@ job('GitHub-Code') {
         github('ShirshaDatta/Automating-the-deployment-of-a-containerized-app-in-K8S-using-Groovy', 'master')
     }
     steps {
-       shell(''' sudo cp * -v /task6
-       sudo docker build -t shirsha30/httpd_server:v1 /task6/
+       shell(''' sudo cp * -v /Automating-the-deployment-of-a-containerized-app-in-K8S-using-Groovy.git
+       sudo docker build -t shirsha30/httpd_server:v1 /Automating-the-deployment-of-a-containerized-app-in-K8S-using-Groovy.git
        sudo docker push shirsha30/httpd_server:v1 
        ''')
     }
@@ -18,7 +18,7 @@ job('Deployment') {
     }
     
     steps {
-       shell(''' fullfilename="/task6/*.html"
+       shell(''' fullfilename="/Automating-the-deployment-of-a-containerized-app-in-K8S-using-Groovy.git*.html"
 			filename=$(basename "$fullfilename")
 			ext="${filename##*.}"
 			echo $ext
@@ -29,7 +29,7 @@ job('Deployment') {
 			   then
 			      echo "Already Running"
 				else
-				  sudo kubectl create -k /task6/
+				  sudo kubectl create -k /Automating-the-deployment-of-a-containerized-app-in-K8S-using-Groovy.git/
 				 fi
 				 
 			elif [ $ext == php ];
@@ -39,7 +39,7 @@ job('Deployment') {
 				  echo "Already Running"
 			      
 				else
-				sudo kubectl create -k /task6/
+				sudo kubectl create -k /Automating-the-deployment-of-a-containerized-app-in-K8S-using-Groovy.git/
 			  fi	 
 			else
 			   echo "everything is working"
