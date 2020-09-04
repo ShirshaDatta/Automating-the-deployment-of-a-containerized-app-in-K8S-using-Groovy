@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: deploy-pvc1
   labels:
+    #env: testing
     name: deploypvc1
 
 spec:
