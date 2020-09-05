@@ -70,13 +70,10 @@ job('Testing') {
 
 
 
-buildPipelineView('Devops-Task6') {
-    filterBuildQueue(true)
-    filterExecutors(false)
-    title('Devops-Task6')
-    displayedBuilds(1)
+buildPipelineView('Task6') {
+    title('Devops6')
+    displayedBuilds(5)
     selectedJob('GitHub-Code')
-    alwaysAllowManualTrigger(false)
     showPipelineParameters(true)
     refreshFrequency(20)
 }
