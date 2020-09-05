@@ -2,15 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata: 
   name: myweb-deploy  
+  labels:
+    env: testing
 spec:
   replicas: 1
   selector:
     matchLabels:
         env: testing
+  strategy:
+    type: Rolling update
 
   template:
     metadata:
-     name: myweb-deploy
      labels:
        env: testing
        dc: "2"
@@ -21,10 +24,5 @@ spec:
        image: shirsha30/httpd_server:latest
        ports:
        - containerPort: 80
-       volumeMounts:
-       - name: web-vol1
-         mountPath: /var/www/html/
-     volumes:
-     - name: web-vol1
-       persistentVolumeClaim:
-         claimName: deploy-pvc1
+         
+      
