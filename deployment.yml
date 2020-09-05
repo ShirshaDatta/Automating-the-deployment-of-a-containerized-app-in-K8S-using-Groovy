@@ -10,8 +10,7 @@ spec:
     matchLabels:
         env: testing
   strategy:
-    type: Rolling update
-
+    type: RollingUpdate
   template:
     metadata:
      labels:
