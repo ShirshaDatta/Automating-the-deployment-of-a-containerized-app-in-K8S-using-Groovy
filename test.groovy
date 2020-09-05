@@ -75,8 +75,8 @@ buildPipelineView('Devops-Task6') {
     filterExecutors(false)
     title('Devops-Task6')
     displayedBuilds(1)
-    selectedJob('GroovyScript')
+    selectedJob('GitHub-Code')
     alwaysAllowManualTrigger(false)
-  showPipelineParameters(true)
-  refreshFrequency(20)
+    showPipelineParameters(true)
+    refreshFrequency(20)
 }
