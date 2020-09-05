@@ -60,10 +60,8 @@ job('Testing') {
 		if [ $status == 200 ]
 		then
 		echo "running"
-		//sudo python3 /task6/successmail.py
 		else
 		echo "failure"
-		//sudo python3 /task6/failure.py
 		fi 
           
           ''')
